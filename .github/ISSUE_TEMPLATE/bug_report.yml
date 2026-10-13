@@ -1,0 +1,155 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Fill this out with enough detail that someone can reproduce the problem, judge the scope, and turn the issue into implementation-ready work.
+
+        Maintainers and agents: keep the `bug` label and add any other existing labels that apply. Treat the issue as implementation-ready only after the Spec details / Implementation + test plan section is clear enough to build from; add `spec-ready` at that point when the repository has that label.
+
+  - type: textarea
+    id: tldr
+    attributes:
+      label: TL;DR
+      description: "One sentence: the bug's core impact or goal. When a picture is faster than prose, add one small view below it: a Mermaid flowchart or sequence diagram of the changed flow, a `diff` of the key interface or config change, or a table. Say in one sentence what it shows; email and `gh` show only the source."
+      placeholder: Fix ... so ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: Overview
+      description: What is this about? Give a short overview of the bug, where it shows up, and who or what it affects.
+      placeholder: |
+        Since ..., ... does ...
+        This affects ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened? Name the user/operator/developer-visible behavior that should be preserved.
+      placeholder: It should ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What happened instead? Include error messages, tracebacks, logs, screenshots, or unexpected state when available.
+      placeholder: The command failed with ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: potential-solution
+    attributes:
+      label: Potential Solution (sketch/draft)
+      description: Optional draft fix, likely owner module, or suspected cause. Keep this provisional until verified against the code.
+      placeholder: |
+        The issue may live in ...
+        A possible fix is ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproducing the problem
+      description: Minimal steps, commands, config, data, or environment needed to trigger the bug.
+      placeholder: |
+        1. Configure ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: input
+    id: component
+    attributes:
+      label: Component / area
+      description: Which part of the system is affected? Add matching labels after creation when you have permission.
+      placeholder: e.g. CLI, API, docs, CI
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / Commit
+      description: Output of `git rev-parse --short HEAD`, package version, or deployed image/version.
+      placeholder: e.g. abc1234
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Relevant runtime details.
+      placeholder: |
+        - OS: Ubuntu 24.04 / WSL2 / macOS
+        - Runtime and version:
+        - Command or entry point:
+        - Relevant configuration:
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / related issues and PRs
+      description: Link dependencies, blockers, duplicates, regressions, or related PRs.
+      placeholder: |
+        - Regression from #123
+        - Duplicate of #456
+        - Related to #789
+    validations:
+      required: false
+
+  - type: textarea
+    id: specs
+    attributes:
+      label: "Spec details / Implementation + test plan"
+      description: Complete this before routing the issue to implementation. Include enough detail for an implementer and reviewer to agree on done.
+      placeholder: |
+        Problem statement:
+        - ...
+
+        Locked decisions:
+        - ...
+
+        Scope boundaries:
+        - In scope:
+        - Out of scope:
+
+        Acceptance criteria / checklist:
+        - [ ] ...
+
+        Implementation constraints:
+        - ...
+
+        Test plan / proof:
+        - ...
+
+        Dependencies / sub-issues:
+        - ...
+
+        Roadmap impact:
+        - ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any extra details that help understand the issue without expanding the scope.
+    validations:
+      required: false
