@@ -1,0 +1,133 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for new features, enhancements, and planned behavior changes. The goal is to make the request understandable now and ready for implementation once the implementation plan is filled in.
+
+        Maintainers and agents: keep the `enhancement` label and add any other existing labels that apply. Treat the issue as implementation-ready only after the Spec details / Implementation + test plan section is clear enough to build from; add `spec-ready` at that point when the repository has that label.
+
+  - type: textarea
+    id: tldr
+    attributes:
+      label: TL;DR
+      description: "One sentence: the feature's core goal or user-visible outcome. When a picture is faster than prose, add one small view below it: a Mermaid flowchart or sequence diagram of the changed flow, a `diff` of the key interface or config change, or a table. Say in one sentence what it shows; email and `gh` show only the source."
+      placeholder: Enable ... so ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: Overview
+      description: What is this about? Give a short overview of the feature, the area it touches, and who benefits from it.
+      placeholder: |
+        This adds ... to ...
+        It helps ... by ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: Describe the desired user/operator/developer-visible behavior and the workflow it should enable.
+      placeholder: A user should be able to ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior / Current Limitation
+      description: What happens today, or what is missing from the current system?
+      placeholder: Today this requires ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: potential-solution
+    attributes:
+      label: Potential Solution (sketch/draft)
+      description: Draft the likely design, API, workflow, or module owner. Keep this as a proposal until verified against the current codebase.
+      placeholder: |
+        A possible design is ...
+        Likely owner module(s):
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproducing the problem / current workflow
+      description: Show the current workflow, missing workflow, command, config, or example that motivates the feature.
+      placeholder: |
+        1. Try to ...
+        2. Notice that ...
+        3. The desired workflow would ...
+    validations:
+      required: false
+
+  - type: input
+    id: component
+    attributes:
+      label: Component / area
+      description: Which part of the system does this relate to? Add matching labels after creation when you have permission.
+      placeholder: e.g. CLI, API, docs, CI
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / related issues and PRs
+      description: Link dependencies, blockers, follow-ups, related design work, or PRs.
+      placeholder: |
+        - Depends on #123
+        - Blocked by #456
+        - Follow-up to #789
+    validations:
+      required: false
+
+  - type: textarea
+    id: specs
+    attributes:
+      label: "Spec details / Implementation + test plan"
+      description: Complete this before routing the issue to implementation. Include enough detail for an implementer and reviewer to agree on done.
+      placeholder: |
+        Problem statement:
+        - ...
+
+        Locked decisions:
+        - ...
+
+        Scope boundaries:
+        - In scope:
+        - Out of scope:
+
+        Acceptance criteria / checklist:
+        - [ ] ...
+
+        Implementation constraints:
+        - ...
+
+        Test plan / proof:
+        - ...
+
+        Dependencies / sub-issues:
+        - ...
+
+        Roadmap impact:
+        - ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add design notes, references, screenshots, examples, or tradeoffs that help clarify the feature.
+    validations:
+      required: false
