@@ -10,19 +10,10 @@ body:
         Maintainers and agents: keep the `bug` label and add any other existing labels that apply. Treat the issue as implementation-ready only after the Spec details / Implementation + test plan section is clear enough to build from; add `spec-ready` at that point when the repository has that label.
 
   - type: textarea
-    id: tldr
-    attributes:
-      label: TL;DR
-      description: "One sentence: the bug's core impact or goal. When a picture is faster than prose, add one small view below it: a Mermaid flowchart or sequence diagram of the changed flow, a `diff` of the key interface or config change, or a table. Say in one sentence what it shows; email and `gh` show only the source."
-      placeholder: Fix ... so ...
-    validations:
-      required: true
-
-  - type: textarea
     id: overview
     attributes:
       label: Overview
-      description: What is this about? Give a short overview of the bug, where it shows up, and who or what it affects.
+      description: "What is this about? Give a short overview of the bug, where it shows up, and who or what it affects. When a picture is faster than prose, add one small view: a Mermaid flowchart or sequence diagram of the changed flow, a `diff` of the key interface or config change, or a table. Say in one sentence what it shows; email and `gh` show only the source."
       placeholder: |
         Since ..., ... does ...
         This affects ...
@@ -153,3 +144,12 @@ body:
       description: Any extra details that help understand the issue without expanding the scope.
     validations:
       required: false
+
+  - type: input
+    id: tldr
+    attributes:
+      label: TL;DR
+      description: One sentence that states the bug's core impact or goal.
+      placeholder: Fix ... so ...
+    validations:
+      required: true
