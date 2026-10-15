@@ -10,19 +10,10 @@ body:
         Maintainers and agents: keep the `enhancement` label and add any other existing labels that apply. Treat the issue as implementation-ready only after the Spec details / Implementation + test plan section is clear enough to build from; add `spec-ready` at that point when the repository has that label.
 
   - type: textarea
-    id: tldr
-    attributes:
-      label: TL;DR
-      description: "One sentence: the feature's core goal or user-visible outcome. When a picture is faster than prose, add one small view below it: a Mermaid flowchart or sequence diagram of the changed flow, a `diff` of the key interface or config change, or a table. Say in one sentence what it shows; email and `gh` show only the source."
-      placeholder: Enable ... so ...
-    validations:
-      required: true
-
-  - type: textarea
     id: overview
     attributes:
       label: Overview
-      description: What is this about? Give a short overview of the feature, the area it touches, and who benefits from it.
+      description: "What is this about? Give a short overview of the feature, the area it touches, and who benefits from it. When a picture is faster than prose, add one small view: a Mermaid flowchart or sequence diagram of the changed flow, a `diff` of the key interface or config change, or a table. Say in one sentence what it shows; email and `gh` show only the source."
       placeholder: |
         This adds ... to ...
         It helps ... by ...
@@ -131,3 +122,12 @@ body:
       description: Add design notes, references, screenshots, examples, or tradeoffs that help clarify the feature.
     validations:
       required: false
+
+  - type: input
+    id: tldr
+    attributes:
+      label: TL;DR
+      description: One sentence that states the feature's core goal or user-visible outcome.
+      placeholder: Enable ... so ...
+    validations:
+      required: true

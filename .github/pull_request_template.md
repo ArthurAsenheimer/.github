@@ -1,20 +1,14 @@
-## TL;DR
-
-<!-- One sentence: the core goal or outcome of this PR.
-     When a picture is faster than prose, add one small view below:
-     a Mermaid flowchart or sequence diagram of the changed flow, a
-     `diff` of the key interface or config change, or a table. Say in
-     one sentence what it shows; email and `gh` show only the source. -->
-
-This PR ...
-
 ## What Problem This Solves
 
 <!-- Which problem, gap, or bug does this PR address? State the concrete pain that exists today and why it is worth fixing now. -->
 
 ## Description
 
-<!-- What does this PR change? Keep the first paragraph to 1-3 sentences, then add bullets if useful. -->
+<!-- What does this PR change? Keep the first paragraph to 1-3 sentences, then add bullets if useful.
+     When a picture is faster than prose, add one small view: a Mermaid
+     flowchart or sequence diagram of the changed flow, a `diff` of the key
+     interface or config change, or a table. Say in one sentence what it
+     shows; email and `gh` show only the source. -->
 
 ## Related Issues
 
@@ -90,3 +84,9 @@ This PR ...
 - Tradeoffs:
 - Scope boundaries / deferred work:
 - Open questions:
+
+## TL;DR
+
+<!-- One sentence that states the core goal or outcome of this PR. -->
+
+This PR ...
